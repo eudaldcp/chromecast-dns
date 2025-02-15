@@ -15,8 +15,8 @@ echo "Device connected!"
 
 echo
 echo "Configuring DNS..."
-adb shell settings set global private_dns_mode hostname
-adb shell settings set global private_dns_specifier "$DNS_SERVER"
+adb shell settings put global private_dns_mode hostname
+adb shell settings put global private_dns_specifier "$DNS_SERVER"
 
 DNS_MODE="$(adb shell settings get global private_dns_mode)"
 DNS_SPECIFIER="$(adb shell settings get global private_dns_specifier)"
